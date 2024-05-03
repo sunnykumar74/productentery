@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Item Entry Form</title>
+    <style>
+        /* body{background-color: black;
+
+
+        } */
+        html {
+            font-size: 10px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #d1 {
+            height: 7rem;
+            width: 100%;
+            background-color: blue;
+        }
+
+        #d2 {
+            background-color: cornflowerblue;
+            height: 6rem;
+            width: 100%;
+            padding-top: 2rem;
+            /* border-radius: 0rem 0rem 3rem 3rem; */
+            text-align: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        #b1,
+        #b2 {
+            height: 4rem;
+            width: 49.1%;
+            border-radius: 0.5rem;
+            margin-left: 0px;
+            text-align: center;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+            border: none;
+            box-shadow: -75px 0px 13px -39px rgba(0, 0, 8, .1);
+        }
+
+        #b2 {
+            background-color: white;
+            border: none;
+            z-index: 0;
+            width: 49.3%;
+
+        }
+
+        #b1 {
+            background-color: aquamarine;
+        }
+
+        #d25 {
+            position: absolute;
+            color: white;
+            font-size: 3rem;
+            text-decoration: none;
+            margin-left: 6rem;
+            margin-top: 2rem;
+        }
+
+        #d4 {
+            float: right;
+            width: 23rem;
+            background-color: aquamarine;
+            border-radius: 0.6rem;
+            height: 4rem;
+            margin-top: 2rem;
+            margin-right: 3rem;
+        }
+
+        #d5 {
+            width: 100%;
+            height: 60rem;
+            display: flex;
+
+
+        }
+
+        #d6 {
+            height: 95%;
+            width: 20%;
+            float: left;
+            flex-shrink: 3;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 0rem 4rem 4rem 0rem;
+        }
+
+        #h1 {
+            width: 80%;
+            height: 100%;
+            float: left;
+        }
+
+        #t {
+            height: 100%;
+            width: 100%;
+            border: 2px solid red;
+        }
+        #t tr{
+            width: 50%;
+        }
+
+        input {
+            height: 4rem;
+            width: 75%;
+            border-radius: 0.4rem;
+            font-size: 1.5rem;
+            border: 1px solid rgb(61, 60, 60);
+            padding-left: 1.5rem;
+        }
+
+        .l,
+        .l2 {
+            position: absolute;
+            padding-top: .3rem;
+            margin: -1rem 2rem;
+            font-size: 1.4rem;
+            padding: .2rem;
+            background-color: white;
+            visibility: hidden;
+        }
+
+        #a {
+            height: 4rem;
+            width: 15rem;
+            background-color: rgb(70, 70, 196);
+            color: white;
+            font-size: 1.5rem;
+            border-radius: 0.5rem;
+        }
+
+        #a:hover {
+            background-color: blue;
+            cursor: pointer;
+        }
+
+        #a:active {
+            background-color: rgb(18, 18, 115);
+        }
+
+        #b {
+            margin-left: 9rem;
+            height: 4rem;
+            width: 15rem;
+            background-color: rgb(245, 64, 64);
+            color: white;
+            border-radius: 0.5rem;
+            font-size: 1.5rem;
+
+        }
+
+        #b:hover {
+            cursor: pointer;
+            background-color: red;
+        }
+
+        #b:active {
+            background-color: rgb(123, 26, 26);
+        }
+
+        .da1 {
+            width: 75%;
+            height: 4rem;
+            border-radius: .5rem;
+            font-size: 1.5rem;
+            padding-left: 2rem;
+        }
+
+        .da2 {
+            position: absolute;
+            font-size: 1.5rem;
+            background-color: white;
+            margin-top: .3rem;
+        }
+
+        .t2,
+        .t3 {
+            height: 4rem;
+            width: 59%;
+            font-size: 1.5rem;
+            border-radius: .5rem;
+        }
+
+        .t3 {
+            width: 15%;
+            text-align: center;
+        }
+
+        #t11 {
+            margin-left: 0rem;
+        }
+
+        .h {
+            width: 80%;
+        }
+
+        .f1 {
+            height: 3rem;
+            background-color: burlywood;
+            border-radius: .5rem;
+        }
+        .cate{
+            height: 4rem;
+            width: 75%;
+            border-radius: 0.4rem;
+            font-size: 1.5rem;
+            border: 1px solid rgb(61, 60, 60);
+            padding-left: 1.5rem;
+
+        }
+        td{
+            border: 2px solid red;
+        }
+
+        /* -----------------------------------------------------------------service css------------------------------- */
+        .h table {
+            width: 100%;
+            margin-top: 2rem;
+        }
+
+        .h table td {
+            width: 33.33%;
+            text-align: center;
+        }
+
+        .t1 {
+            height: 4rem;
+            width: 90%;
+            border-radius: 0.4rem;
+            background-color: transparent;
+            border: 1px solid rgb(61, 60, 60);
+        }
+
+        .l1 {
+
+            position: absolute;
+            padding-top: .4rem;
+            margin: -.5% 0 0 0rem;
+            font-size: 1.4rem;
+            padding: .2rem;
+            background-color: white;
+            visibility: hidden;
+
+        }
+
+        #c {
+            height: 4rem;
+            width: 15rem;
+            background-color: blue;
+            color: white;
+            font-size: larger;
+            border-radius: 0.5rem;
+            margin-top: 2rem;
+
+
+        }
+
+        #c:hover {
+            cursor: pointer;
+            background-color: blue;
+        }
+
+        #c:active {
+            background-color: rgb(76, 76, 195);
+        }
+
+        #d {
+            text-align: center;
+            height: 4rem;
+            width: 15rem;
+            background-color: red;
+            color: white;
+            border-radius: 0.5rem;
+            font-size: larger;
+            margin-top: 2rem;
+            margin-left: 10rem;
+
+
+        }
+
+        #d:hover {
+            cursor: pointer;
+            background-color: red;
+        }
+
+        #d:active {
+            background-color: rgb(123, 26, 26);
+        }
+
+        @media(max-width:1080px) {
+            /* html {
+                font-size: 55%;
+            } */
+        }
+
+        @media(max-width:768px) {
+            /* html {
+                font-size: 45%;
+            } */
+
+            #d6 {
+                display: none;
+            }
+
+            #h1,
+            .h {
+                width: 100%;
+            }
+            #h1 th{
+                display: block;
+            }
+            #h1 th{
+                margin:1rem 0 3rem 0;
+            }
+            #a,#b{
+                margin: auto;
+            }
+        }
+        .t1 option {
+            text-align: center;
+            font-size: large;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="d1">
+        <a href="#" id="d25"><i class="fa fa-home"></i>&nbsp; Home</a>
+        <div id="d4">
+            <input type="button" value="Entry" id="b1">
+            <input type="button" value="Service" id="b2">
+        </div>
+    </div>
+    <div id="d2">
+        <h2 id="ent"><b>ITEM ENTERY FROM</b></h2>
+    </div>
+    <div id="d5">
+        <div id="d6"><img src="gro1.webp" alt=""></div>
+        <div id="h1">
+            <table id="t">
+                <tr>
+                    <th>
+                        <label id="l1" class="l" for="" ><b>ITEM CODE</b></label>
+                        <input class="t" id="t1" type="text" placeholder="ITEM CODE" 
+                            oninput="label('#t1','#l1')"  onfocus="fgcheck('#t1')" onfocusout=" flcheck('#t1')" >
+                    </th>
+                    <th>
+                        <label class="l" id="l6" for=""><B>ITEM NAME</B></label>
+                        <input class="t" id="t6" type="text" placeholder="ITEM NAME" oninput="label('#t6','#l6')" onfocus="fgcheck('#t6')"
+                            onfocusout=" flcheck('#t6')" >
+                    </th>
+                </tr>
+
+                <tr>
+                    <th rowspan="1">
+                            <select name="BRAND " class="cate" >
+                                <option value="ml">CATEGORY</option>
+                                <option value="kg">HJEBFJ</option>
+                                <option value="l">JEB</option>
+                                <option value="f">HBFEGJ </option>
+                            </select>
+                    </th>
+                    <th>
+                        <label class="l" id="l8" for=""><B>BRAND</B></label>
+                        <input class="t" id="t8" type="text" placeholder="BRAND" oninput="label('#t8','#l')"
+                            onfocusout=" flcheck('#t8')" onfocus="fgcheck('#t8')">
+                    </th>
+                </tr>
+                <tr>
+                    <th> <label class="l" id="l9" for=""><B>WEIGHT</B></label>
+                        <input class="t2" id="t9" type="text" placeholder="WEIGHT" oninput="label('#t9','#l9')"
+                        onfocusout=" flcheck('#t9')" onfocus="fgcheck('#t9')">&nbsp;&nbsp;&nbsp;
+                        <select name="WEIGHT" class="t3">
+                            <option value="ml">ml</option>
+                            <option value="kg">kg</option>
+                            <option value="l">l</option>
+                            <option value="f">h </option>
+                    </th>
+                    <th>
+                        <label id="l12" class="da2"><B>MFG DATE</B></label>
+                        <br>&nbsp;&nbsp;
+                        <input class="da1" id="t12" type="date" oninput="label('#t12','#l12')"
+                            onfocusout=" flcheck('#t12')" onfocus="fgcheck('#t12')">
+                    </th>
+                </tr>
+                <tr>
+                    <th>
+                        <label class="l" id="l5" for=""><B>ITEM DESCRIPTION</B></label>
+                        <textarea class="txt" id="t5"
+                            style="resize: none;border-radius: .5rem;padding-top: 1rem;padding-left: 1rem; height: 8rem; width: 75%; font-size: 1.7rem;"
+                            name="ITEM DESCRIPTION" id="" placeholder="ITEM DESCRIPTION"
+                            oninput="label('#t5','#l5')" onfocusout="flcheck('#t5')" onfocus="fgcheck('#t5')"></textarea>
+                    </th>
+                    <th><label id="l13" class="da2"onfocus="fgcheck('#t5')"><B>EXPIRY DATE</B></label>
+                        <br> &nbsp;&nbsp;
+                        <input id="t13" class="da1" type="date" oninput="label('#t13','#l13')"
+                        onfocusout=" flcheck('#t13')" onfocus="fgcheck('#t13')">
+                    </th>
+                </tr>
+                <tr>
+                    <th> <label class="l" id="l2" for=""><B>UNIT PRICE</B></label>
+                        <input class="t" id="t2" type="text" placeholder="UNIT PRICE" oninput="label('#t2','#l2')"
+                            onfocusout=" flcheck('#t2')" onfocus="fgcheck('#t2')">
+                    </th>
+                    <th> <label class="l" id="l3" for=""><B>DISCOUNT</B></label>
+                        <input class="t" id="t3" type="text" placeholder="DISCOUNT" onfocus="fgcheck('#t3')"  oninput="label('#t3','#l3')"
+                            onfocusout=" flcheck('#t3')" >
+                    </th>
+                </tr>
+                <tr>
+                    <th> <label class="l" id="l10" for=""><B>AVAILABLE QTY</B></label>
+                        <input class="t" id="t10" type="text" placeholder="AVAILABLE QTY" oninput="label('#t10','#l10')"
+                            onfocusout=" flcheck('#t10')" onfocus="fgcheck('#t10')">
+                    </th>
+                    <th><input class="f1" id="t11" type="file" placeholder="PRODUCT PIC" oninput="label('#t11','#l11')"
+                            onfocusout=" flcheck('#t11')"></th>
+                </tr>
+                <tr>
+                    <th></th>
+                    <th></th>
+                </tr>
+                <tr>
+                    <th colspan="1"></th>
+                    <th><button id="a"><b>SUBMIT</b><button id="b"><b>CANCEL</b></button></th>
+                </tr>
+            </table>
+        </div>
+<!-- ------------------service page----------------------------------------------------------------------------------------------------------------------------------------------------------- -->
+        <div class="h" hidden>
+            <table id="table1">
+                <tr>
+                    <td>
+                        <label id="l1" class="l1" for=""><b>ITEM CODE</b></label>
+                        <input class="t1" id="tt" type="text" placeholder="  ITEM CODE" oninput="label('#tt','#l1')">
+                    </td>
+                    <td>
+                        <label class="l1" id="l8" for=""><B>BRAND</B></label>
+                        <select name="BRAND " class="t1">
+                            <option value="ml">CATEGORY</option>
+                            <option value="kg">HJEBFJ</option>
+                            <option value="l">JEB</option>
+                            <option value="f">HBFEGJ </option>
+                        </select>
+                    </td>
+                    <td>
+                        <label class="l1" id="l7" for=""><B>CATEGORY</B></label>
+                        <select name="BRAND " class="t1">
+                            <option value="ml">BRAND</option>
+                            <option value="kg">HJEBFJ</option>
+                            <option value="l">JEB</option>
+                            <option value="f">HBFEGJ </option>
+                        </select>
+                    </td>
+                </tr>
+                <tr class="b1">
+                    <td colspan="3"><button id="c">SEARCH</button>
+                        <button id="d"><b>REFRESH</b></button>
+                    </td>
+                </tr>
+                </tabl>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script>
+
+$('#t1').on('keypress', function(e) {
+        if(!((e.which>=65 && e.which<=90 )(e.which>=97 && e.which<=122)))
+            e.preventDefault()
+        
+        });
+$('#t9').on('keypress', function(e) {
+if(!(e.which>=48 && e.which<=57 ))
+    e.preventDefault()
+
+});
+
+
+
+
+
+        var slide = 0;
+        $('#b2').click(function () {
+            if (slide == 0) {
+                $('#b1').animate(
+                    { left: '50%' }
+                );
+                $('#b2').animate(
+                    { left: '-50%' }
+                );
+                $(this).attr('value', 'Entry')
+                $('#b1').attr('value', 'service')
+                slide = 1;
+                $('#h1').hide()
+                $('.h').show()
+                $('#ent').text('ITEM SERVICE FORM')
+            }
+            else {
+                $('#b1').animate(
+                    { left: '0%' }
+                );
+                $('#b2').animate(
+                    { left: '0' }
+                );
+                $(this).attr('value', 'Service')
+                $('#b1').attr('value', 'Entry')
+                slide = 0;
+                $('.h').hide()
+                $('#h1').show()
+                $('#ent').text('ITEM ENTRY FORM')
+            }
+        })
+        function label(id, t) {
+            a = $(id).val();
+            if (a.trim() == '')
+                $(t).css('visibility', 'hidden');
+            else
+                $(t).css('visibility', 'visible');
+
+        }
+        function flcheck(a) {
+            var txt = $(a).val();
+            
+            if (txt.trim().length == 0) {
+                $(a).val("*This field is mandatory!");
+                $(a).css({ "border": "solid 1px red", "color": "red" });
+                flag = false;
+            }
+        }
+        function fgcheck(a) {
+            var txt = $(a).val();
+            // alert(a)
+            if (txt=='*This field is mandatory!') {
+                $(a).val("");
+                $(a).css({ "border": "solid 1px black", "color": "black" });
+            }
+        }
+        $doc
+        
+    </script>
+</body>
+
+</html>
